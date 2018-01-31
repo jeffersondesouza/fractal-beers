@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
+export default class App extends Component {
 
-ReactDOM.render(
-  <h1>Hello world!!!!</h1>,
-  document.getElementById('root')
-);
+  render() {
+    return (
+      <div>
+        <button>Ola</button>
+        <h1>Hello world!!!!</h1>
+      </div>
+    );
+  }
+}

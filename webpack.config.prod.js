@@ -43,7 +43,7 @@ plugins.push(CommonChunksPlugin);
 
 module.exports = {
   entry: {
-    app: './src/App.js',
+    app: './src/index.js',
     vendor: ['react', 'react-dom']
   },
   output: {
