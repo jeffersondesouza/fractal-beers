@@ -1,37 +1,15 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const devConfig = require('./webpack.config.dev.js');
+const prodConfig = require('./webpack.config.prod.js');
 
-const plugins = [];
+let config;
 
-
-const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  hash: true,
-  minify: {
-    html5: true,
-    collapseInlineTagWhitespace: true,
-    removeComments: true,
-  },
-  template: './public/index.html',
-  filename: 'index.html',
-  inject: 'body'
-});
-
-
-
-plugins.push(HtmlWebpackPluginConfig)
-
-
-module.exports = {
-  entry: './src/App.js',
-  output: {
-    filename: 'public/bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-  },
-  module: {
-    loaders: [
-      { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
-    ]
-  },
-  plugins
+switch (process.env.npm_lifecycle_event) {
+  case 'start':
+    config = devConfig;
+    break;
+  default:
+    config = devConfig;
+    break;
 }
+
+module.exports = config;
