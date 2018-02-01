@@ -6,9 +6,21 @@ import Layout from './Layout';
 
 export default class extends Component {
 
+  soma() {
+    return 2 + 2;
+  }
+
   render() {
     return (
       <Layout />
     );
   }
 }
+
+
+/* 
+
+
+
+  
+    */
