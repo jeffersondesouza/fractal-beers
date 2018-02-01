@@ -6,7 +6,7 @@ import Home from '../Home';
 import Header from '../Header';
 import Footer from '../Footer';
 import Beers from '../Beers';
-
+import BeerDetail from '../BeerDetail';
 
 export default class extends Component {
 
@@ -17,9 +17,9 @@ export default class extends Component {
         <Header />
         <main className="main">
           {/* this.props.children */}
-          {/*  */}
-          <Home />
+          {/* <Home /> */}
           {/* <Beers /> */}
+          <BeerDetail />
         </main>
         <Footer />
       </div>

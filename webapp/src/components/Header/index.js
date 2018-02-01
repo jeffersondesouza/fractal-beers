@@ -9,10 +9,10 @@ import './scss/header.scss';
 export default class Header extends Component {
   render() {
     return (
-      <header className="header">
+      <header className="header container">
         <HeaderLogo />
         <HeaderNav />
-        <HeaderCart />
+        {/* <HeaderCart /> */}
       </header>
     );
   }

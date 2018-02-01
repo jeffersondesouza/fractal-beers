@@ -1,0 +1,11 @@
+@import '../../../styles/scss/colors.scss';
+.beer-detail__breadcrumb {
+    margin-top: 2em;
+    color: $main-text-ligth-color;
+    font-size: 12px;
+    &__links {
+        &__link {
+            display: inline-block;
+        }
+    }
+}
