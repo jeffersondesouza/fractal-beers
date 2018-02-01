@@ -11,7 +11,7 @@ export default class Beers extends Component {
       <div className="beers">
 
         <form className="beers__search">
-          <input type="text" name="search" placeholder="Busque por Marca" className="beers__serach_input" />
+          <input autoFocus={true} type="text" name="search" placeholder="Busque por Marca" className="beers__search__input" />
         </form>
 
         <ul class="beers__list">
