@@ -3,9 +3,7 @@
     border-top: solid 0.9em $secondary-color;
     width: 100%;
     &-logo {
-        display: inline-block;
-        margin: 0 5em 0 0;
-        padding-top: 1.5em;
+        margin: 0 8em 0 0;
         padding-top: 1.5em;
         width: 6em;
         &-figcaption {
@@ -17,7 +15,6 @@
         }
     }
     &-nav {
-        display: inline-block;
         height: 8em;
         vertical-align: text-bottom;
         &-links {
@@ -29,6 +26,38 @@
             font-size: 1.3em;
             text-decoration: none;
             margin-right: 4em;
+        }
+    }
+}
+
+.HomePage {
+    &-botle {
+        margin: 0;
+        padding: 0;
+        width: 40%;
+    }
+    &-action {
+        height: 30em;
+        vertical-align: top;
+        text-align: center;
+        width: 40%;
+    }
+    &-tagline {
+        color: $primary-color;
+        font-size: 3em;
+        line-height: 1.3;
+        margin-top: 2em;
+        text-align: center;
+    }
+    &-button--callToAction {
+        border: 0;
+        background: 0;
+        color: $white;
+        font-size: 2em;
+        background-color: $secondary-color;
+        padding: 0.3em 1em;
+        &:hover {
+            cursor: pointer;
         }
     }
 }

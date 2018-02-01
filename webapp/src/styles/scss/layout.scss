@@ -4,10 +4,17 @@ body {
 }
 
 .container {
-    width: 90%;
+    width: 79.5%;
     margin: 0 auto;
 }
 
 .img-responsive {
     width: 100%;
+}
+
+.inline-block {
+    display: inline-block;
+}
+.center{
+    text-align: center;
 }
