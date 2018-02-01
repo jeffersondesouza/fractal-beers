@@ -1,4 +1,9 @@
 @import '../../styles/scss/colors.scss';
+@mixin height-align-value() {
+    height: 8em;
+    vertical-align: text-bottom;
+}
+
 .Header {
     border-top: solid 0.9em $secondary-color;
     width: 100%;
@@ -15,8 +20,6 @@
         }
     }
     &-nav {
-        height: 8em;
-        vertical-align: text-bottom;
         &-links {
             display: flex;
             margin-top: 3em;
@@ -27,10 +30,25 @@
             text-decoration: none;
             margin-right: 4em;
         }
+        @include height-align-value;
+    }
+    &-chart {
+        display: inline-block;
+        @include height-align-value;
+        &-btn {
+            background: 0;
+            background-color: $secondary-color;
+            border: 0;
+            color: $white;
+            margin-left: 5.5em;
+            margin-top: 3.3em;
+        }
     }
 }
 
 .HomePage {
+    background-color: $home-main-bg;
+    padding-top: 3em;
     &-botle {
         margin: 0;
         padding: 0;
@@ -48,6 +66,7 @@
         line-height: 1.3;
         margin-top: 2em;
         text-align: center;
+        margin-bottom: 0.6em;
     }
     &-button--callToAction {
         border: 0;

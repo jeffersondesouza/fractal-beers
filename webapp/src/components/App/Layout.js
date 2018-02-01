@@ -24,6 +24,9 @@ export default class Layout extends Component {
                 <li><a className="Header-nav-link" href="#">Contatos</a></li>
               </ul>
             </nav>
+            <div className="Header-chart">
+              <button className="Header-chart-btn" >B</button> 
+            </div>
           </div>
         </header>
         <main className="HomePage">
