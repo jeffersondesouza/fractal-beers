@@ -4,50 +4,85 @@
     vertical-align: text-bottom;
 }
 
-.Header {
-    border-top: solid 0.9em $secondary-color;
-    width: 100%;
-    &-logo {
-        margin: 0 8em 0 0;
-        padding-top: 1.5em;
-        width: 6em;
-        &-figcaption {
+.header {
+    align-items: center;
+    border-top: solid 0.7em $secondary-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 10%;
+
+    &__logo {
+    
+        &__figcaption {
             font-family: 'Yanone Kaffeesatz', sans-serif;
-            font-size: 2em;
-            &--primary {
-                color: $primary-color;
-            }
+            font-size: 1.5em;
         }
     }
-    &-nav {
-        &-links {
+    &__nav {
+    
+        &__links {
             display: flex;
-            margin-top: 3em;
         }
-        &-link {
-            color: $secondary-color;
+    
+        &__link {
             font-size: 1.3em;
             text-decoration: none;
-            margin-right: 4em;
+            margin-right: 3em;
         }
-        @include height-align-value;
     }
-    &-chart {
-        display: inline-block;
-        @include height-align-value;
-        &-btn {
-            background: 0;
-            background-color: $secondary-color;
+    &__chart {
+       
+        &__btn {
+            background: url('/src/images/chart.svg') no-repeat center;
+            background-size: 3.5em 4em;
             border: 0;
             color: $white;
-            margin-left: 5.5em;
-            margin-top: 3.3em;
+            font-size: 0.8em;
+            font-weight: bold;
+            height: 4.5em;
+            padding-top: 1em;
+            width: 2em;
         }
     }
 }
+.main{
+    background-color: $home-main-bg;
+
+}
+.home{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 65%;
+    
+     &__presetation{
+        text-align: center;
+  
+        &__tagline{
+            color: $primary-color;
+            font-size: 3em;
+            line-height: 1.5;
+            text-align: center;
+        }
+        &__call-to-action{
+            background-color: $secondary-color;
+            border: 0;
+            color: $white;
+            font-size: 1.5em;            
+            font-weight: 800;
+            height: 2.2em;
+            line-height: 1.5;
+            margin-top: 1.2em;
+            width: 10em;
+        }
+    }
+    p{
+        margin: 0;
+    }      
+}
 
 .HomePage {
-    background-color: $home-main-bg;
     padding-top: 3em;
     &-botle {
         margin: 0;
