@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 
-import Layout from './components/Layout';
+import './app.scss';
 
-export default class App extends Component {
+import Layout from './Layout';
+
+export default class extends Component {
 
   render() {
     return (

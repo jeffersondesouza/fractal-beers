@@ -1,0 +1,6 @@
+@import '../../styles/scss/colors.scss';
+.Header-logo-figcaption {
+    &--primary {
+        color: $primary-color-dark;
+    }
+}
