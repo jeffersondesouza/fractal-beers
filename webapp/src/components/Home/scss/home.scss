@@ -1,0 +1,12 @@
+@import '../../../styles/scss/colors.scss';
+
+.home {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 65%;
+    p {
+        margin: 0;
+    }
+}

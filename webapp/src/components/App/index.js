@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './app.scss';
+import './scss/app.scss';
 
 import Home from '../Home';
 import Header from '../Header';
@@ -17,8 +17,9 @@ export default class extends Component {
         <Header />
         <main className="main">
           {/* this.props.children */}
-          {/* <Home /> */}
-          <Beers />
+          {/*  */}
+          <Home />
+          {/* <Beers /> */}
         </main>
         <Footer />
       </div>
