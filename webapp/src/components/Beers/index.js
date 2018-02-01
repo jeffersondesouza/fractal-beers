@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import './beers.scss';
+import './scss/beers.scss';
 
-import Beer from './Beer';
+import BeerItem from './BeerItem';
 
 
 export default class Beers extends Component {
@@ -14,27 +14,27 @@ export default class Beers extends Component {
           <input autoFocus={true} type="text" name="search" placeholder="Busque por Marca" className="beers__search__input" />
         </form>
 
-        <ul class="beers__list">
-          <li class="beers__list__item">
-            <Beer />
+        <ul className="beers__list">
+          <li className="beers__list__item">
+           <BeerItem />
           </li>
-          <li class="beers__list__item">
-            <Beer />
+          <li className="beers__list__item">
+           <BeerItem />
           </li>
-          <li class="beers__list__item">
-            <Beer />
+          <li className="beers__list__item">
+           <BeerItem />
           </li>
-          <li class="beers__list__item">
-            <Beer />
+          <li className="beers__list__item">
+           <BeerItem />
           </li>
-          <li class="beers__list__item">
-            <Beer />
+          <li className="beers__list__item">
+           <BeerItem />
           </li>
-          <li class="beers__list__item">
-            <Beer />
+          <li className="beers__list__item">
+           <BeerItem />
           </li>
-          <li class="beers__list__item">
-            <Beer />
+          <li className="beers__list__item">
+           <BeerItem />
           </li>
         </ul>
       </div>

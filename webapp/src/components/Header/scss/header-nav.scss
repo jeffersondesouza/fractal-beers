@@ -1,0 +1,10 @@
+.header__nav {
+    &__links {
+        display: flex;
+    }
+    &__link {
+        font-size: 1.3em;
+        text-decoration: none;
+        margin-right: 3em;
+    }
+}

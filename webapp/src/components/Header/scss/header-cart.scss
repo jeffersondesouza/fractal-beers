@@ -1,0 +1,14 @@
+@import '../../../styles/scss/colors.scss';
+.header__cart {
+    &__btn {
+        background: url('/src/images/chart.svg') no-repeat center;
+        background-size: 3.5em 4em;
+        border: 0;
+        color: $white;
+        font-size: 0.6em;
+        font-weight: bold;
+        height: 3.5em;
+        padding-top: 1em;
+        width: 1.5em;
+    }
+}

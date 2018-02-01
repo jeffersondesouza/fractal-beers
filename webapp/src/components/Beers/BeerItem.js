@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './beer.scss';
+import './scss/beer-item.scss';
 
 export default class Beer extends Component {
   render() {
