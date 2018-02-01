@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, browserHistory, IndexRoute } from 'react-router';
+import { Router, Route, browserHistory, hashHistory,IndexRoute } from 'react-router';
 
 import './styles/css/reset.css';
 import './styles/scss/layout.scss';
@@ -12,7 +12,7 @@ import BeerDetail from './components/BeerDetail';
 
 
 ReactDOM.render(
-  <Router history={browserHistory}>
+  <Router history={hashHistory}>
     <Route path="/" component={App} >
       <IndexRoute component={Home} />
       <Route path="/beers" component={Beers} />
