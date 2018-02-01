@@ -50,9 +50,14 @@ export default class extends Component {
 
         </main>
 
-        <footer>
-          footer
-      </footer>
+        <footer className="footer">
+          <p className="footer__author">Jéfferson Desouza</p>
+          <ul className="footer__contacts">
+              <li className="footer__contact">T</li>
+              <li className="footer__contact">G</li>
+              <li className="footer__contact">L</li>
+          </ul>
+        </footer>
       </div>
 
 
