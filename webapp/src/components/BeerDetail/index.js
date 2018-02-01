@@ -11,7 +11,7 @@ export default class BeerDetail extends Component {
         <Breadcrumb />
         <section className="beer-detail__informations">
           <figure className="beer-detail__informations__figure">
-            <img className="img-responsive" src="https://images-na.ssl-images-amazon.com/images/I/51XP7y8908L._SL1024_.jpg" />
+            <img className="img-responsive" src={"https://images-na.ssl-images-amazon.com/images/I/51XP7y8908L._SL1024_.jpg"} />
           </figure>
           <div className="beer-detail__informations__description">
             <h2 className="beer-detail__informations__description__title">Marca da Cerveja</h2>
