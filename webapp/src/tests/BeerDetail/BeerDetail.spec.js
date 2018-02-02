@@ -4,6 +4,8 @@ import { createMockStore } from 'redux-test-utils';
 import BeerDetail from '../../../src/components/BeerDetail'
 
 import shallowWithStore from '../utils/shallowWithStore';
+import Breadcrumb from '../../components/BeerDetail/Breadcrumb';
+
 
 describe('BeerDetail', () => {
 
