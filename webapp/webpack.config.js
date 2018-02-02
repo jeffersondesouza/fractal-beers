@@ -8,7 +8,7 @@ switch (process.env.npm_lifecycle_event) {
     config = devConfig;
     break;
   default:
-    config = devConfig;
+    config = prodConfig;
     break;
 }
 

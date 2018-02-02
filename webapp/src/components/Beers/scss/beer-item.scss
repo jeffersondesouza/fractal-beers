@@ -1,6 +1,17 @@
 @import '../../../styles/scss/colors.scss';
 .beer {
     padding: 0 0.5em 1em;
+    &__figure {
+        text-align: center;
+        &__img {
+            height: 13em;
+            width: 4em;
+        }
+    }
+    &__name,
+    &__tagline{
+        text-align: left;
+    }
     &__name {
         color: $main-text-color;
         font-size: 0.9em;
