@@ -45,6 +45,7 @@
     "nyc": "^11.4.1",
     "optimize-css-assets-webpack-plugin": "^2.0.0",
     "react-addons-test-utils": "^15.6.2",
+    "redux-test-utils": "^0.2.2",
     "sass-loader": "^6.0.6",
     "sinon": "^4.2.2",
     "style-loader": "^0.18.2",
