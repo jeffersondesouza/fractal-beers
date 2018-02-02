@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 import App from '../../components/App'
+import Header from '../../components/App/Header/index';
+import Footer from '../../components/App/Footer/index';
 
 
 describe('a passing test', () => {
@@ -11,14 +13,11 @@ describe('a passing test', () => {
     expect(true).to.be.true;
   });
 
-  it('should sdd 2 + 2', () => {
-    expect(2+2).to.be.equal(4)
+
+  it('should render Header and Footer', () => {
+    const containsElements = wrapper.containsAllMatchingElements([<Header />, <Footer />]);
+    expect(containsElements).to.be.true;
   });
 
-
-  it('should sdd 2 + 2', () => {
-    
-    expect(wrapper.type()).to.eql('div');
-  });
 
 });

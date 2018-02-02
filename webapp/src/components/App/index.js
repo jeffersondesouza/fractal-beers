@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import './scss/app.scss';
 
-import Header from '../Header';
-import Footer from '../Footer';
+import Header from './Header';
+import Footer from './Footer';
 
 class App extends Component {
  
