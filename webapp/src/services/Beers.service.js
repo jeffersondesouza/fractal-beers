@@ -13,16 +13,25 @@ export class BeersService {
 
   /**
    * getAllBeers() dispatch an action to beers reducer
-   * and returns a promise containg a list of beers
+   * and returns a promise containg a list of beers,
+   * 
+   * 
    * @param null
    * @return <Promise> elements
    */
-  static getAllBeers() {
+  static getAllBeers(beersPerRequestGroup) {
+    
     return dispatch => {
-      axios.get(API_URL)
+      axios.get(API_URL, {
+        params: {
+          page: beersPerRequestGroup,
+          per_page: 12,
+
+        }
+      })
         .then(res => res.data)
         .then(beers => {
-          dispatch(getBeersRequest(beers));
+          dispatch(getBeersRequest(beers, beersPerRequestGroup));
           return beers;
         });
     }

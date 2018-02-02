@@ -1,28 +1,22 @@
 @import '../../../styles/scss/colors.scss';
 .beers {
     margin-top: 1em;
-    &__search{
-        text-align: center;
-        margin-bottom: 2.5em;
 
-        &__input{
-            background: 0;
-            border: 0;
-            border-bottom: 0.15em solid #e1dcdc;
-            color: $main-text-color;
-            font-size: 0.8em;
-            outline: 0;
-            padding: 1em;
-            width: 37em;
-        }
-    }
     &__list {
         padding-top: 1%;
         display: flex;
         flex-wrap: wrap;
+        margin-top: 5em;
         &__item {
             width: 25%;
             margin-bottom: 2em;
+            a {
+                text-decoration: none;
+            }
         }
+    }
+    &__show-more-area {
+        text-align: center;
+        margin-top: 1.5em;
     }
 }

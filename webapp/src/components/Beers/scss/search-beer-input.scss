@@ -1,0 +1,28 @@
+@import '../../../styles/scss/colors.scss';
+.beers {
+    &__search {
+        margin: auto;
+        &__input {
+            background: 0;
+            border: 0;
+            border-bottom: 0.15em solid #e1dcdc;
+            color: $main-text-color;
+            font-size: 0.8em;
+            outline: 0;
+            padding: 1em;
+            width: 40em;
+        }
+        &__items {
+            margin-bottom: 1.2em;
+   
+        }
+        &__item {
+            margin-left: 1.7em;
+            color:$secondary-color;
+            font-size: 0.8em;
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+    }
+}

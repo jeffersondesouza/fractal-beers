@@ -1,5 +1,5 @@
-export function getBeersRequest(beers) {
-  return { type: 'GET_BEERS_REQUEST', beers };
+export function getBeersRequest(beers, beersPerRequestGroup) {
+  return { type: 'GET_BEERS_REQUEST', beers,  beersPerRequestGroup };
 }
 
 export function getBeerById(beer) {
