@@ -7,9 +7,9 @@ export default class Beer extends Component {
   render() {
     return (
       <div className="beer">
-        <Link>
+        <Link to={`/beers/${this.props.beer.id}`}>
           <figure className="beer__figure">
-            <img src={this.props.beer.image_url} className="beer__figure__img img-responsive" />
+            <img src={this.props.beer.image_url} alt={`Garrafa de cerveja da marca  ${this.props.beer.name}`} className="beer__figure__img" />
             <figcaption>
               <p className="beer__name">{this.props.beer.name}</p>
               <p className="beer__tagline"><small>{this.props.beer.tagline}</small></p>

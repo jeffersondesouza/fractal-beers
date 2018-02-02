@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 import './scss/header-nav.scss';
 
@@ -8,8 +8,8 @@ export default class HeaderNav extends Component {
     return (
       <nav className="header__nav">
         <ul className="header__nav__links">
-          <li><Link className="header__nav__link secondary-color" to={`/`}>Início</Link></li>
-          <li><Link className="header__nav__link secondary-color" to={`/beers`}>Cervejas</Link></li>
+          <li><Link to={'/'} exact={true} className="header__nav__link secondary-color" activeStyle={{ color: '#d45500' }}>Início</Link></li>
+          <li><Link to={`/beers`} exact={true} className="header__nav__link secondary-color" activeStyle={{ color: '#d45500' }}>Cervejas</Link></li>
           {/* <li><Link className="header__nav__link secondary-color" to={`/about`}>Sobre</Link></li> */}
         </ul>
       </nav>

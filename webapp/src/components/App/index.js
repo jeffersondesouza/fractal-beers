@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import './scss/app.scss';
 
 import Header from '../Header';
 import Footer from '../Footer';
 
-export default class extends Component {
-
+class App extends Component {
+ 
 
   render() {
     return (
@@ -20,3 +21,11 @@ export default class extends Component {
     );
   }
 }
+
+
+
+App.contextTypes = {
+  store: PropTypes.object.isRequired
+}
+
+export default App;

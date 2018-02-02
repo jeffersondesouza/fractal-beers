@@ -6,6 +6,14 @@
     &__links {
         &__link {
             display: inline-block;
+            margin-right: 0.5em;
+            a {
+                text-decoration: none;
+                color: $main-text-ligth-color;
+            }
+            &:hover {
+                cursor: pointer
+            }
         }
     }
 }

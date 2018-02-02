@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 
+import { Link } from 'react-router';
+
 import './scss/breadcrumb.scss';
 
 export default class Breadcrumb extends Component {
   render() {
     return (
-      <nav className="beer-detail__breadcrumb container">
+      <nav className="beer-detail__breadcrumb">
         <ul className="beer-detail__breadcrumb__links">
-          <li className="beer-detail__breadcrumb__links__link">Inicio /</li>
-          <li className="beer-detail__breadcrumb__links__link">Loja /</li>
-          <li className="beer-detail__breadcrumb__links__link">Sobre</li>
+          <li className="beer-detail__breadcrumb__links__link">
+            <Link to={'/'}>Inicio /</Link>
+          </li>
+          <li className="beer-detail__breadcrumb__links__link">
+            <Link to={'/beers'}>Cervejas /</Link>
+          </li>
+          <li className="beer-detail__breadcrumb__links__link">{this.props.beerName}</li>
         </ul>
       </nav>
     );

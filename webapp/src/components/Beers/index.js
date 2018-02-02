@@ -1,33 +1,39 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+
+import PropTypes from 'prop-types';
+
+import { BeersService } from '../../services'
 
 import './scss/beers.scss';
 
 import BeerItem from './BeerItem';
 
 
-export default class Beers extends Component {
+class Beers extends Component {
 
   constructor() {
     super();
     this.state = { beers: [] }
   }
 
-
-  setBeers(beers) {
-    this.setState({ beers })
-  }
-
-  loadBeers() {
-
-    axios.get(API_URL)
-      .then(res => res.data)
-      .then(beers => this.setBeers(beers));
+  componentWillMount() {
+    this.context.store.subscribe(() => {
+      this.setBeers(this.context.store.getState().beersReducer);
+    });
   }
 
   componentDidMount() {
     this.loadBeers();
   }
+  
+  setBeers(beers) {
+    this.setState({ beers })
+  }
+
+  loadBeers() {
+    this.context.store.dispatch(BeersService.getAllBeers());
+  }
+
 
   render() {
     return (
@@ -41,7 +47,7 @@ export default class Beers extends Component {
           {
             this.state.beers.map(beer =>
               <li className="beers__list__item" key={beer.id}>
-                <BeerItem beer={beer}/>
+                <BeerItem beer={beer} />
               </li>
             )
           }
@@ -51,3 +57,10 @@ export default class Beers extends Component {
     );
   }
 }
+
+
+Beers.contextTypes = {
+  store: PropTypes.object.isRequired
+}
+
+export default Beers
