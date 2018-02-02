@@ -2,6 +2,22 @@ import axios from 'axios';
 
 import { getBeersRequest, getBeerById } from '../actions/actions-factory';
 
+/** Declared here, because we don't want this function to be exported, 
+ * and the class functions are static 
+*/
+function getBeers(beersPerRequestGroup, searchParms) {
+  return dispatch => {
+    axios.get(API_URL, {
+      params: searchParms
+    })
+      .then(res => res.data)
+      .then(beers => {
+        dispatch(getBeersRequest(beers, beersPerRequestGroup));
+        return beers;
+      });
+  }
+}
+
 
 export class BeersService {
 
@@ -15,12 +31,15 @@ export class BeersService {
    * getAllBeers() dispatch an action to beers reducer
    * and returns a promise containg a list of beers,
    * 
-   * 
    * @param null
    * @return <Promise> elements
    */
   static getAllBeers(beersPerRequestGroup) {
-    
+    const searchParms = {
+      page: beersPerRequestGroup,
+      per_page: 12,
+    }
+
     return dispatch => {
       axios.get(API_URL, {
         params: {
@@ -36,6 +55,23 @@ export class BeersService {
         });
     }
   }
+
+  static getBeersWithParams(beersPerRequestGroup, params) {
+
+    const searchParms = {
+      page: beersPerRequestGroup,
+      per_page: 12,
+    }
+
+    if (params.param !== 'all' && params.paramValue) {
+      searchParms[params.param] = params.paramValue;
+    }
+
+    return getBeers(beersPerRequestGroup, searchParms);
+  }
+
+
+
 
   /**
  * getBeerById() dispatch an action to beers reducer
@@ -53,6 +89,8 @@ export class BeersService {
         });
     }
   }
+
+
 
 }
 

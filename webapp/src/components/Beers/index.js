@@ -27,6 +27,11 @@ class Beers extends Component {
     this.context.store.dispatch(BeersService.getAllBeers(this.beersPerRequestGroup));
   }
 
+  loadBeersWith(params) {
+    this.setState({ isWaitingDataFromServer: true });
+    this.context.store.dispatch(BeersService.getBeersWithParams(this.beersPerRequestGroup, params));
+  }
+
   /**
    * showMoreBeers() calls the beer listing function to increase the beers list,
    * 
@@ -51,6 +56,11 @@ class Beers extends Component {
     this.loadBeers();
   }
 
+  onSearchBeers(params) {
+    this.loadBeersWith(params);
+  }
+
+  // all rendering function at the end of component
 
   renderWaitingBeersLoadding() {
     if (this.state.isWaitingDataFromServer) {
@@ -69,10 +79,6 @@ class Beers extends Component {
         <BeerItem beer={beer} />
       </li>
     )
-  }
-
-  onSearchBeers(event){
-    console.log(event)
   }
 
   render() {
