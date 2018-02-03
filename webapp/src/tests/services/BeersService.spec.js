@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import sinon from 'sinon';
 import axios from 'axios';
+import webpack from 'webpack';
+
 import { createMockStore } from 'redux-test-utils';
 
 
@@ -15,26 +17,24 @@ describe('test Footer rendering', () => {
 
 
   it('should call get beers and dispatch a new actions to store', async () => {
-
+    const API_URL = 's'
+    process.env.API_URL = API_URL;
 
     const beersPerRequestGroup = 1;
     const params = {
       name: 'duff'
     }
 
-    const axiosGetSpy = sinon.spy(axios, 'get');
  
     const dispatch = BeersService.getBeers(beersPerRequestGroup, params)();
 
 
-    expect(axiosGetSpy.callCount).to.equal(1);
 
 
 
   });
 
   after(() => {
-    axios.get.restore();
   });
 
 

@@ -3,12 +3,12 @@ const prodConfig = require('./webpack.config.prod.js');
 
 let config;
 
-switch (process.env.npm_lifecycle_event) {
-  case 'start':
-    config = devConfig;
+switch (process.env.NODE_ENV) {
+  case 'production':
+    config = prodConfig;
     break;
   default:
-    config = prodConfig;
+    config = devConfig;
     break;
 }
 

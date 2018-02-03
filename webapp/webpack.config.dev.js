@@ -1,9 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const axios = require('axios');
 
 const plugins = [];
+let API_URL = JSON.stringify('https://api.punkapi.com/v2/beers');
 
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -20,7 +20,6 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 
 
-let API_URL = JSON.stringify('https://api.punkapi.com/v2/beers');
 plugins.push(HtmlWebpackPluginConfig)
 plugins.push(new webpack.DefinePlugin({API_URL}));
 
