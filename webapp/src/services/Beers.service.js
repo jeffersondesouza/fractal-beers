@@ -35,6 +35,8 @@ export class BeersService {
    * @return <Promise> elements
    */
   static getAllBeers(beersPerRequestGroup) {
+
+    // per_page
     const searchParms = {
       page: beersPerRequestGroup,
       per_page: 12,

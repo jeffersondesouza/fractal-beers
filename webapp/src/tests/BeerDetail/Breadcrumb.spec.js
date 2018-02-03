@@ -7,7 +7,10 @@ describe('Breadcrumb', () => {
   let component;
 
   beforeEach(() => {
-    component = shallow(<Breadcrumb />)
+    const props = {
+      beerName: 'Duff'
+    }
+    component = shallow(<Breadcrumb {...props} />)
   });
 
 
@@ -24,12 +27,17 @@ describe('Breadcrumb', () => {
     const totalOfLinks = 3;
 
     expect(component.find('li')).to.have.length(totalOfLinks);
-    
+
     /**
      * The last link contains the beer id, if it wold be redirectbel, a new request would be done
      * we are avoiding this by no passing this last element as a link, just to prevent a user unecessary requet 
      */
-    expect(component.find('Link')).to.have.length(totalOfLinks-1);
+    expect(component.find('Link')).to.have.length(totalOfLinks - 1);
+  });
+
+  it('should last Breadcrumb item to contais the beer name prop', () => {
+    const lastLi = component.find('li').last();
+    expect(lastLi.html().includes('Duff')).to.be.true;
   });
 
 
