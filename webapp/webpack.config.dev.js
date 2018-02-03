@@ -1,10 +1,10 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const axios =  require('axios');
 
 const plugins = [];
-let API_URL = JSON.stringify('https://api.punkapi.com/v2/beers');
-
+const API_URL = JSON.stringify('https://api.punkapi.com/v2/beers');
 
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   hash: true,
@@ -21,6 +21,7 @@ const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
 
 
 plugins.push(HtmlWebpackPluginConfig)
+// we defined API_URL as a env variable, so if the base url changes, we don't need to modify the api call in every file
 plugins.push(new webpack.DefinePlugin({API_URL}));
 
 module.exports = {

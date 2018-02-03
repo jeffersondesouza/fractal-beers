@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory, hashHistory, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 
+import { configApplication } from './config'
 import store from './store';
 
 import './styles/scss/reset.scss';
@@ -11,6 +12,9 @@ import App from './components/App'
 import Home from './components/Home';
 import Beers from './components/Beers';
 import BeerDetail from './components/BeerDetail';
+
+// call and set all applications configs
+configApplication();
 
 ReactDOM.render(
   <Provider store={store}>

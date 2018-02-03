@@ -31,7 +31,7 @@ export class BeersService {
     }
 
     return dispatch => {
-      axios.get(API_URL, {
+      axios.get('/', {
         params: searchParms
       })
         .then(res => res.data)
@@ -51,7 +51,7 @@ export class BeersService {
  */
   static getBeerById(id) {
     return dispatch => {
-      axios.get(`${API_URL}/${id}`)
+      axios.get(`/${id}`)
         .then(response => response.data[0])
         .then(beer => {
           dispatch(getBeerById(beer));
