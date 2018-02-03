@@ -1,6 +1,6 @@
 import { shallow } from 'enzyme';
 
-const shallowWithStore = (component, store) => {
+export function shallowWithStore(component, store) {
   const context = {
     store,
   };
@@ -12,4 +12,3 @@ const shallowWithStore = (component, store) => {
   return shallow(component, { context, props });
 };
 
-export default shallowWithStore;

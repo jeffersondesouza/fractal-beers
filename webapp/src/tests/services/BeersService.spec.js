@@ -1,53 +1,56 @@
 import React, { Component } from 'react';
-
 import sinon from 'sinon';
 import axios from 'axios';
 import webpack from 'webpack';
+import { Thunk } from 'redux-testkit';
+
 
 import { createMockStore } from 'redux-test-utils';
+import axiosMockAdapter from 'axios-mock-adapter';
+
+import { BeersService } from '../../services/';
+import { beersMock } from '../utils';
+import { getBeersRequest } from '../../actions/actions-factory';
 
 
-import { BeersService } from '../../services';
+describe('test BeersService', () => {
+  let axiosMock;
+
+  beforeEach(() => {
+    // import and pass custom axios instance to this method
+    axiosMock = new axiosMockAdapter(axios);
+
+    axiosMock.onGet('/').reply(200, beersMock());
+
+  });
+
+  it('should call get beers and dispatch a new actions to store', async () => {
 
 
+    const beersPerRequestGroup = 1;
+    const params = { name: 'duff' }
+
+    BeersService.getBeers(beersPerRequestGroup, params)();
 
 
-describe('test Footer rendering', () => {
+    axios.get('/')
+      .then(res => expect(res.data.length).to.be.eql(2));
 
+  });
 
 
   it('should call get beers and dispatch a new actions to store', async () => {
-    const API_URL = 's'
-    process.env.API_URL = API_URL;
 
-    const beersPerRequestGroup = 1;
-    const params = {
-      name: 'duff'
-    }
+    axiosMock.onGet('/1').reply(200, beersMock()[0]);
 
- 
-    const dispatch = BeersService.getBeers(beersPerRequestGroup, params)();
+    BeersService.getBeerById(1)();
 
 
-
-
+    axios.get('/1')
+      .then(res => expect(res.data.id).to.be.eql(beersMock()[0].id));
 
   });
 
-  after(() => {
-  });
-
-
-  /* 
-  
-  
-  it('should call BeersService when call get a Beer Details', () => {
-    const beer = { id: 1111, name: 'duff' }
-    component.instance().getBeerByDetails();
-    expect(BeersService.getBeerById.callCount).to.equal(1);
-  });
-
-
-  */
 
 });
+

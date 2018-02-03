@@ -5,7 +5,6 @@ import { createMockStore } from 'redux-test-utils';
 import Home from '../../../src/components/Home'
 import HomeBotleBanner from '../../components/Home/HomeBotleBanner';
 import HomePresentation from '../../components/Home/HomePresentation';
-import shallowWithStore from '../utils/shallowWithStore';
 
 describe('test Home', () => {
 

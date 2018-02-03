@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import sinon from 'sinon';
 import { createMockStore } from 'redux-test-utils';
 
-import shallowWithStore from '../utils/shallowWithStore';
+import { shallowWithStore } from '../utils';
 import Breadcrumb from '../../components/BeerDetail/Breadcrumb';
 import BeerDetail from '../../../src/components/BeerDetail'
 
@@ -60,7 +60,7 @@ describe('BeerDetail', () => {
     expect(BeersService.getBeerById.callCount).to.equal(1);
   });
 
-  after(()=>{
+  after(() => {
     BeersService.getBeerById.restore();
   });
 

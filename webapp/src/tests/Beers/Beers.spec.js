@@ -3,7 +3,7 @@ import { createMockStore } from 'redux-test-utils';
 
 import Beers from '../../../src/components/Beers'
 
-import shallowWithStore from '../utils/shallowWithStore';
+import { shallowWithStore } from '../utils';
 
 describe('test Beers', () => {
 

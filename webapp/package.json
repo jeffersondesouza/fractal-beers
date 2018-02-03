@@ -24,6 +24,7 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "axios-mock-adapter": "^1.12.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-istanbul": "^4.1.5",
@@ -44,11 +45,13 @@
     "jsdom": "^11.6.2",
     "jsdom-global": "^3.0.2",
     "mocha": "^5.0.0",
+    "moxios": "^0.4.0",
     "node-sass": "^4.7.2",
     "nyc": "^11.4.1",
     "optimize-css-assets-webpack-plugin": "^2.0.0",
     "react-addons-test-utils": "^15.6.2",
     "redux-test-utils": "^0.2.2",
+    "redux-testkit": "^1.0.6",
     "sass-loader": "^6.0.6",
     "sinon": "^4.2.2",
     "style-loader": "^0.18.2",
