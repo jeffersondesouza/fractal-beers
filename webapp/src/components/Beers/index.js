@@ -24,12 +24,12 @@ class Beers extends Component {
 
   loadBeers() {
     this.setState({ isWaitingDataFromServer: true });
-    this.context.store.dispatch(BeersService.getAllBeers(this.beersPerRequestGroup));
+    this.context.store.dispatch(BeersService.getBeers(this.beersPerRequestGroup));
   }
 
   loadBeersWith(params) {
     this.setState({ isWaitingDataFromServer: true });
-    this.context.store.dispatch(BeersService.getBeersWithParams(this.beersPerRequestGroup, params));
+    this.context.store.dispatch(BeersService.getBeers(this.beersPerRequestGroup, params));
   }
 
   /**

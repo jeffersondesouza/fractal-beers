@@ -2,22 +2,6 @@ import axios from 'axios';
 
 import { getBeersRequest, getBeerById } from '../actions/actions-factory';
 
-/** Declared here, because we don't want this function to be exported, 
- * and the class functions are static 
-*/
-function getBeers(beersPerRequestGroup, searchParms) {
-  return dispatch => {
-    axios.get(API_URL, {
-      params: searchParms
-    })
-      .then(res => res.data)
-      .then(beers => {
-        dispatch(getBeersRequest(beers, beersPerRequestGroup));
-        return beers;
-      });
-  }
-}
-
 
 export class BeersService {
 
@@ -34,7 +18,7 @@ export class BeersService {
    * @param null
    * @return <Promise> elements
    */
-  static getAllBeers(beersPerRequestGroup) {
+  static getBeers(beersPerRequestGroup, params) {
 
     // per_page
     const searchParms = {
@@ -42,13 +26,13 @@ export class BeersService {
       per_page: 12,
     }
 
+    if (params) {
+      searchParms[params.param] = params.paramValue;
+    }
+
     return dispatch => {
       axios.get(API_URL, {
-        params: {
-          page: beersPerRequestGroup,
-          per_page: 12,
-
-        }
+        params: searchParms
       })
         .then(res => res.data)
         .then(beers => {
@@ -57,22 +41,6 @@ export class BeersService {
         });
     }
   }
-
-  static getBeersWithParams(beersPerRequestGroup, params) {
-
-    const searchParms = {
-      page: beersPerRequestGroup,
-      per_page: 12,
-    }
-
-    if (params.param !== 'all' && params.paramValue) {
-      searchParms[params.param] = params.paramValue;
-    }
-
-    return getBeers(beersPerRequestGroup, searchParms);
-  }
-
-
 
 
   /**
