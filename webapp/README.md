@@ -38,6 +38,23 @@ And repeat
 until finished
 ```
 
+Depoly 
+
+Para realizar o deploy
+
+```
+npm install -g firebase-tools 
+```
+
+
+```
+npm run deploy  
+```
+
+Esse comando fará o build de produção com todas as tarefas de minificação e bundle, e em seguida subirá o deloy
+
+
+
 End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
