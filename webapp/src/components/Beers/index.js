@@ -66,7 +66,7 @@ class Beers extends Component {
     if (this.state.isWaitingDataFromServer) {
       return (
         <div className="center container">
-          <img src={'/src/images/loadding.gif'} />
+          <img src={'http://res.cloudinary.com/dlbdfgear/image/upload/v1517717981/loadding_jyiw1n.gif'} />
         </div>
       );
     }
