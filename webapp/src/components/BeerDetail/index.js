@@ -8,6 +8,10 @@ import './scss/beer-detail.scss';
 
 import Breadcrumb from './Breadcrumb';
 
+const contextTypes = {
+  store: PropTypes.object.isRequired
+}
+
 class BeerDetail extends Component {
 
   constructor() {
@@ -36,7 +40,7 @@ class BeerDetail extends Component {
   render() {
     return (
       <div className="beer-detail container">
-        <Breadcrumb beerName={this.state.beer.name}/>
+        <Breadcrumb beerName={this.state.beer.name} />
         <section className="beer-detail__informations">
           <figure className="beer-detail__informations__figure">
             <img className="beer-detail__informations__figure__img" src={this.state.beer.image_url} />
@@ -52,8 +56,6 @@ class BeerDetail extends Component {
   }
 }
 
-BeerDetail.contextTypes = {
-  store: PropTypes.object.isRequired
-}
+BeerDetail.contextTypes = contextTypes;
 
 export default BeerDetail

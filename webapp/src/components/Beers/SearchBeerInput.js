@@ -12,6 +12,7 @@ export default class SearchBeerInput extends Component {
       searchPlaceholderText: '',
     }
     this.searchfilterParam = '';
+    this.onChangeBeerFilter = this.onChangeBeerFilter.bind(this);
   }
 
   componentWillMount() {
@@ -79,11 +80,41 @@ export default class SearchBeerInput extends Component {
     return (
       <form className="beers__search container" onSubmit={this.onSearchBeers.bind(this)}>
         <div className="beers__search__items container left">
-          <RadioButton type={'radio'} name={'filterParam'} id="all" label={'Todas'} value={'all'} className={'beers__search__item'} onChange={this.onChangeBeerFilter.bind(this)} />
-          <RadioButton type={'radio'} name={'filterParam'} id="beer_name	" label={'Marca'} value={'beer_name'} className={'beers__search__item'} onChange={this.onChangeBeerFilter.bind(this)} />
-          <RadioButton type={'radio'} name={'filterParam'} id="food" label={'Armonização'} value={'food'} className={'beers__search__item'} onChange={this.onChangeBeerFilter.bind(this)} />
-          <RadioButton type={'radio'} name={'filterParam'} id="abv_gt" label={'Teor Alcoólico'} value={'abv_gt'} className={'beers__search__item'} onChange={this.onChangeBeerFilter.bind(this)} />
-          <RadioButton type={'radio'} name={'filterParam'} id="ebc_gt" label={'Grau de Tonalidade'} value={'ebc_gt'} className={'beers__search__item'} onChange={this.onChangeBeerFilter.bind(this)} />
+          <RadioButton
+            id="all"
+            name={'filterParam'}
+            label={'Todas'}
+            value={'all'}
+            className={'beers__search__item'}
+            onChange={this.onChangeBeerFilter}
+          />
+          <RadioButton id="beer_name" 
+            name={'filterParam'}
+            label={'Marca'}
+            value={'beer_name'}
+            className={'beers__search__item'}
+            onChange={this.onChangeBeerFilter} />
+          <RadioButton
+            id="food"
+            name={'filterParam'}
+            label={'Armonização'}
+            value={'food'}
+            className={'beers__search__item'}
+            onChange={this.onChangeBeerFilter} />
+          <RadioButton
+            id="abv_gt"
+            name={'filterParam'}
+            label={'Teor Alcoólico'}
+            value={'abv_gt'}
+            className={'beers__search__item'}
+            onChange={this.onChangeBeerFilter} />
+          <RadioButton
+            id="ebc_gt"
+            name={'filterParam'}
+            label={'Grau de Tonalidade'}
+            value={'ebc_gt'}
+            className={'beers__search__item'}
+            onChange={this.onChangeBeerFilter} />
         </div>
         <div className="container left">
           <input ref={input => this.filterInpuValue = input} autoFocus={true} type="text" name="search" placeholder={this.state.searchPlaceholderText} className="beers__search__input" />

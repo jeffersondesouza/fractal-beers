@@ -10,12 +10,18 @@ import BeerItem from './BeerItem';
 import SearchBeerInput from './SearchBeerInput';
 
 
+const contextTypes = {
+  store: PropTypes.object.isRequired
+}
+
 class Beers extends Component {
 
   constructor() {
     super();
     this.state = { beers: [], isWaitingDataFromServer: true };
     this.beersPerRequestGroup = 1;
+    this.onSearchBeers = this.onSearchBeers.bind(this);
+    this.showMoreBeers = this.showMoreBeers.bind(this);
   }
 
   setBeers(beers) {
@@ -84,13 +90,13 @@ class Beers extends Component {
   render() {
     return (
       <div className="beers">
-        <SearchBeerInput onSearchBeers={this.onSearchBeers.bind(this)} />
+        <SearchBeerInput onSearchBeers={this.onSearchBeers} />
         <ul className="beers__list container">
           {this.renderBeers()}
         </ul>
         {this.renderWaitingBeersLoadding()}
         <div className="beers__show-more-area container">
-          <button className="btn-primary" onClick={this.showMoreBeers.bind(this)}>Mostrar mais Cervejas</button>
+          <button className="btn-primary" onClick={this.showMoreBeers}>Mostrar mais Cervejas</button>
         </div>
       </div>
     );
@@ -98,8 +104,6 @@ class Beers extends Component {
 }
 
 
-Beers.contextTypes = {
-  store: PropTypes.object.isRequired
-}
+Beers.contextTypes = contextTypes;
 
 export default Beers

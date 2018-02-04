@@ -6,8 +6,11 @@ import './scss/app.scss';
 import Header from './Header';
 import Footer from './Footer';
 
+const contextTypes = {
+  store: PropTypes.object.isRequired
+}
+
 class App extends Component {
- 
 
   render() {
     return (
@@ -22,10 +25,6 @@ class App extends Component {
   }
 }
 
-
-
-App.contextTypes = {
-  store: PropTypes.object.isRequired
-}
+App.contextTypes = contextTypes;
 
 export default App;
