@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './scss/search-beer-input.scss';
 
-import InputRadioCheckbox from '../shared/InputRadioCheckbox';
+import RadioButton from '../shared/RadioButton';
 
 export default class SearchBeerInput extends Component {
 
@@ -79,15 +79,15 @@ export default class SearchBeerInput extends Component {
     return (
       <form className="beers__search container" onSubmit={this.onSearchBeers.bind(this)}>
         <div className="beers__search__items container left">
-          <InputRadioCheckbox type={'radio'} name={'filterParam'} id="all" label={'Todas'} value={'all'} className={'beers__search__item'} onChange={this.onChangeBeerFilter.bind(this)} />
-          <InputRadioCheckbox type={'radio'} name={'filterParam'} id="beer_name	" label={'Marca'} value={'beer_name'} className={'beers__search__item'} onChange={this.onChangeBeerFilter.bind(this)} />
-          <InputRadioCheckbox type={'radio'} name={'filterParam'} id="food" label={'Armonização'} value={'food'} className={'beers__search__item'} onChange={this.onChangeBeerFilter.bind(this)} />
-          <InputRadioCheckbox type={'radio'} name={'filterParam'} id="abv_gt" label={'Teor Alcoólico'} value={'abv_gt'} className={'beers__search__item'} onChange={this.onChangeBeerFilter.bind(this)} />
-          <InputRadioCheckbox type={'radio'} name={'filterParam'} id="ebc_gt" label={'Grau de Tonalidade'} value={'ebc_gt'} className={'beers__search__item'} onChange={this.onChangeBeerFilter.bind(this)} />
+          <RadioButton type={'radio'} name={'filterParam'} id="all" label={'Todas'} value={'all'} className={'beers__search__item'} onChange={this.onChangeBeerFilter.bind(this)} />
+          <RadioButton type={'radio'} name={'filterParam'} id="beer_name	" label={'Marca'} value={'beer_name'} className={'beers__search__item'} onChange={this.onChangeBeerFilter.bind(this)} />
+          <RadioButton type={'radio'} name={'filterParam'} id="food" label={'Armonização'} value={'food'} className={'beers__search__item'} onChange={this.onChangeBeerFilter.bind(this)} />
+          <RadioButton type={'radio'} name={'filterParam'} id="abv_gt" label={'Teor Alcoólico'} value={'abv_gt'} className={'beers__search__item'} onChange={this.onChangeBeerFilter.bind(this)} />
+          <RadioButton type={'radio'} name={'filterParam'} id="ebc_gt" label={'Grau de Tonalidade'} value={'ebc_gt'} className={'beers__search__item'} onChange={this.onChangeBeerFilter.bind(this)} />
         </div>
         <div className="container left">
           <input ref={input => this.filterInpuValue = input} autoFocus={true} type="text" name="search" placeholder={this.state.searchPlaceholderText} className="beers__search__input" />
-          <input type="submit" className="btn-primary" value="Buscar" />
+          <input id="beer-search-submit" type="submit" className="btn-primary" value="Buscar" />
         </div>
       </form>
     );

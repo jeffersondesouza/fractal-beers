@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class InputRadioCheckbox extends Component {
+export default class RadioButton extends Component {
   render() {
     return (
       <label htmlFor={this.props.id} className={this.props.className}>
