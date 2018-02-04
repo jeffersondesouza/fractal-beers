@@ -52,14 +52,14 @@ class Beers extends Component {
   }
 
   componentWillMount() {
-    this.loadBeers();
-  }
-  
-  componentDidMount() {
     this.context.store.subscribe(() => {
       this.setBeers(this.context.store.getState().beersReducer);
       this.setState({ isWaitingDataFromServer: false });
     });
+  }
+
+  componentDidMount() {
+    this.loadBeers();
   }
 
   onSearchBeers(params) {

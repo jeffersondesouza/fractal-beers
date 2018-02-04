@@ -29,13 +29,13 @@ class BeerDetail extends Component {
   }
 
   componentWillMount() {
-    this.getBeerByDetails();
-  }
-
-  componentDidMount() {
     this.context.store.subscribe(() => {
       this.setBeer(this.context.store.getState().beersReducer)
     });
+  }
+
+  componentDidMount() {
+    this.getBeerByDetails();
   }
 
 
