@@ -1,4 +1,6 @@
-# Jampa Beer
+# Fractal Cervas (https://fractalcervas.firebaseapp.com/#/)
+
+caso nao abra - com ctrl-r resolve
 
 Web App para venda de cervejas, desenvolvido em React como parte dos testes da Fractal Tecnologia.
 
