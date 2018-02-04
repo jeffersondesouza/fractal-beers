@@ -3,11 +3,11 @@ import ReactDOM from 'react-dom';
 import { Router, Route, browserHistory, hashHistory, IndexRoute } from 'react-router';
 import { Provider } from 'react-redux';
 
-import { configApplication } from './config'
+import { configApplication } from './config/app-configurator'
 import store from './store';
 
-import './styles/scss/reset.scss';
 import './styles/scss/styles.scss';
+
 import App from './components/App'
 import Home from './components/Home';
 import Beers from './components/Beers';

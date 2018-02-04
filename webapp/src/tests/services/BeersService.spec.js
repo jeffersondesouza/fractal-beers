@@ -10,7 +10,7 @@ import axiosMockAdapter from 'axios-mock-adapter';
 
 import { BeersService } from '../../services/';
 import { beersMock } from '../utils';
-import { getBeersRequest } from '../../actions/actions-factory';
+import { getBeersRequest } from '../../reducers/actions';
 
 
 describe('test BeersService', () => {

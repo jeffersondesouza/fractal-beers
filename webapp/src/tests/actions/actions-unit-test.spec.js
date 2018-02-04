@@ -1,4 +1,4 @@
-import { getBeerById, getBeersRequest } from '../../actions/actions-factory';
+import { getBeerById, getBeersRequest } from '../../reducers/actions';
 
 describe('test redux actions class isolated', () => {
 

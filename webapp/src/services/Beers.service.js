@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-import { getBeersRequest, getBeerById } from '../actions/actions-factory';
-
+import { getBeerById, getBeersRequest } from '../reducers/actions';
 
 export class BeersService {
 
