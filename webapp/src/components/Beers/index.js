@@ -66,8 +66,6 @@ class Beers extends Component {
     this.loadBeersWith(params);
   }
 
-  // all rendering function at the end of component
-
   renderWaitingBeersLoadding() {
     if (this.state.isWaitingDataFromServer) {
       return (

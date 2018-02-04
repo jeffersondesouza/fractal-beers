@@ -15,27 +15,15 @@ export default class SearchBeerInput extends Component {
     this.onChangeBeerFilter = this.onChangeBeerFilter.bind(this);
   }
 
-  componentWillMount() {
-    this.setSearchPlaceholderText('all')
-  }
-
-
-  onChangeBeerFilter(event) {
-    this.setSearchPlaceholderText(event.target.value)
-  }
-
-  onSearchBeers(event) {
-    event.preventDefault();
-    this.sendSeachBeers();
-  }
-
-
-  setSearchPlaceholderText(param) {
-    this.searchfilterParam = param;
-    this.setState({
-      searchPlaceholderText: `${this.getBeerFilterPlaceholder(param)}`
-    });
-    this.restoreForm();
+  getBeerFilterPlaceholder(parameterValue) {
+    const beerFilterParameterObject = {
+      all: 'Selecione um filtro acima e melhore sua busca',
+      beer_name: 'Qual marca você está buscando? Ex:Buzz',
+      food: 'Que prato você deseja armonizar? Ex:Fresh crab with lemon',
+      abv_gt: 'Que teor alcoólico você desejas?',
+      ebc_gt: 'Quanto maior o número, mais escura a cerveja.'
+    }
+    return beerFilterParameterObject[parameterValue];
   }
 
   /**
@@ -57,22 +45,33 @@ export default class SearchBeerInput extends Component {
     return this.filterInpuValue && this.filterInpuValue.value;
   }
 
+
+  componentWillMount() {
+    this.setSearchPlaceholderText('all')
+  }
+
+  onChangeBeerFilter(event) {
+    this.setSearchPlaceholderText(event.target.value)
+  }
+
+  setSearchPlaceholderText(param) {
+    this.searchfilterParam = param;
+    this.setState({
+      searchPlaceholderText: `${this.getBeerFilterPlaceholder(param)}`
+    });
+    this.restoreForm();
+  }
+
+  onSearchBeers(event) {
+    event.preventDefault();
+    this.sendSeachBeers();
+  }
+
   sendSeachBeers() {
     this.props.onSearchBeers({
       param: this.searchfilterParam,
       paramValue: this.filterInpuValue.value
     });
-  }
-
-  getBeerFilterPlaceholder(parameterValue) {
-    const beerFilterParameterObject = {
-      all: 'Selecione um filtro acima e melhore sua busca',
-      beer_name: 'Qual marca você está buscando? Ex:Buzz',
-      food: 'Que prato você deseja armonizar? Ex:Fresh crab with lemon',
-      abv_gt: 'Que teor alcoólico você desejas?',
-      ebc_gt: 'Quanto maior o número, mais escura a cerveja.'
-    }
-    return beerFilterParameterObject[parameterValue];
   }
 
 
@@ -88,7 +87,7 @@ export default class SearchBeerInput extends Component {
             className={'beers__search__item'}
             onChange={this.onChangeBeerFilter}
           />
-          <RadioButton id="beer_name" 
+          <RadioButton id="beer_name"
             name={'filterParam'}
             label={'Marca'}
             value={'beer_name'}

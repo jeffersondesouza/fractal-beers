@@ -19,6 +19,15 @@ class BeerDetail extends Component {
     this.state = { beer: {} }
   }
 
+
+  getBeerByDetails() {
+    this.context.store.dispatch(BeersService.getBeerById(this.props.params.id));
+  }
+
+  setBeer(beer) {
+    this.setState({ beer })
+  }
+
   componentWillMount() {
     this.context.store.subscribe(() => {
       this.setBeer(this.context.store.getState().beersReducer)
@@ -29,13 +38,6 @@ class BeerDetail extends Component {
     this.getBeerByDetails();
   }
 
-  getBeerByDetails() {
-    this.context.store.dispatch(BeersService.getBeerById(this.props.params.id));
-  }
-
-  setBeer(beer) {
-    this.setState({ beer })
-  }
 
   render() {
     return (
