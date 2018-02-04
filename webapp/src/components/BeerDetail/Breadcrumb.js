@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { Link } from 'react-router';
 
-import './scss/breadcrumb.scss';
+import './styles/breadcrumb.scss';
 
 export default class Breadcrumb extends Component {
   render() {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router';
 
-import './scss/header-nav.scss';
+import './styles/header-nav.scss';
 
 export default class HeaderNav extends Component {
   render() {

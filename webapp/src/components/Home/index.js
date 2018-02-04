@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './scss/home.scss';
+import './styles/home.scss';
 
 import HomeBotleBanner from './HomeBotleBanner';
 import HomePresentation from './HomePresentation';

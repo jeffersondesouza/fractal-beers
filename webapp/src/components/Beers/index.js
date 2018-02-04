@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { BeersService } from '../../services'
 
-import './scss/beers.scss';
+import './styles/beers.scss';
 
 import BeerItem from './BeerItem';
 import SearchBeerInput from './SearchBeerInput';
@@ -52,14 +52,14 @@ class Beers extends Component {
   }
 
   componentWillMount() {
+    this.loadBeers();
+  }
+  
+  componentDidMount() {
     this.context.store.subscribe(() => {
       this.setBeers(this.context.store.getState().beersReducer);
       this.setState({ isWaitingDataFromServer: false });
     });
-  }
-
-  componentDidMount() {
-    this.loadBeers();
   }
 
   onSearchBeers(params) {

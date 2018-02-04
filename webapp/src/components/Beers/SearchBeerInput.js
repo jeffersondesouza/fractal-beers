@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './scss/search-beer-input.scss';
+import './styles/search-beer-input.scss';
 
 import RadioButton from '../shared/RadioButton';
 

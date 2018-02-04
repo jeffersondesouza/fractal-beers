@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './scss/header-cart.scss';
+import './styles/header-cart.scss';
 
 export default class HeaderCart extends Component {
   render() {

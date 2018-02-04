@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-import './scss/beer-item.scss';
+import './styles/beer-item.scss';
 
 export default class Beer extends Component {
   render() {

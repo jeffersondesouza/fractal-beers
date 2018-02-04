@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-import './scss/home-presetation.scss';
+import './styles/home-presetation.scss';
 
 export default class HomePresentation extends Component {
 

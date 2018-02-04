@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { BeersService } from '../../services'
 
-import './scss/beer-detail.scss';
+import './styles/beer-detail.scss';
 
 import Breadcrumb from './Breadcrumb';
 
@@ -29,13 +29,13 @@ class BeerDetail extends Component {
   }
 
   componentWillMount() {
-    this.context.store.subscribe(() => {
-      this.setBeer(this.context.store.getState().beersReducer)
-    });
+    this.getBeerByDetails();
   }
 
   componentDidMount() {
-    this.getBeerByDetails();
+    this.context.store.subscribe(() => {
+      this.setBeer(this.context.store.getState().beersReducer)
+    });
   }
 
 
