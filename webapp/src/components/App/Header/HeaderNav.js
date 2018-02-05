@@ -10,7 +10,7 @@ export default class HeaderNav extends Component {
         <ul className="header__nav__links">
           <li>
             <Link to={'/'} className="header__nav__link secondary-color" activeStyle={{ color: '#d45500' }}>
-              Início
+              Página Inícial
             </Link>
           </li>
           <li>
