@@ -7,6 +7,13 @@ Neste documento trago apenas detalhes do projeto;
 Por se tratar de um teste de habilidades, optei por utilizar o webpack e configurar a aplicação 'na mão', em detrimento de usar o Creat React App(que faria a mesma coisa). 
 
 
+## Objetivos do teste
+
+* [OK] Implementar um Web App que consulte uma API e exiba uma lista de cervejas. 
+* [OK] Na listagem deve ser exibido o nome e tagline. 
+* [OK] Ao selecionar um item na lista, exibir a tela de detalhes, contendo: nome, tagline, descrição e imagem.
+
+
 ## Requisitos
 
 * [OK] Utilizar a seguinte API no desafio: https://punkapi.com/documentation/v2;
@@ -37,14 +44,13 @@ O conceito visual foi feito com base na logo da Fractal, definindo as cores prim
 
 Para melhorar a usabilidade fizemos uso das ```Heurísticas de Nielsen```, e de  técnicas de microcopy para melhorar a comunicação com o usuário.
 
-[conceito](/ux-images/minimalismo.png);
-[conceito](/ux-images/microcopy-botão.png);
-[conceito](/ux-images/filtro.png);
-[conceito](/ux-images/conceito.png);
+
+![conceito](https://raw.githubusercontent.com/jeffersondesouza/fractal-beers/master/ux-images/conceito.png)
 
 
-## Objetivos do teste
+![minimalismo](https://raw.githubusercontent.com/jeffersondesouza/fractal-beers/master/ux-images/minimalismo.png)
 
-* [OK] Implementar um Web App que consulte uma API e exiba uma lista de cervejas. 
-* [OK] Na listagem deve ser exibido o nome e tagline. 
-* [OK] Ao selecionar um item na lista, exibir a tela de detalhes, contendo: nome, tagline, descrição e imagem.
+![botao](https://raw.githubusercontent.com/jeffersondesouza/fractal-beers/master/ux-images/microcopy-bot%C3%A3o.png)
+
+![filtro](https://raw.githubusercontent.com/jeffersondesouza/fractal-beers/master/ux-images/filtro.png)
+
