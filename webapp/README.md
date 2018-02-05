@@ -1,8 +1,8 @@
-# Fractal Cervas (https://fractalcervas.firebaseapp.com/#/)
+# Fractal Cervas 
 
-caso nao abra - com ctrl-r resolve
+[Link da webapp](https://fractalcervas.firebaseapp.com/#/)
 
-Web App para venda de cervejas, desenvolvido em React como parte dos testes da Fractal Tecnologia.
+Web App para listagem de Cervejas, desenvolvido em React como parte dos testes da Fractal Tecnologia.
 
 ## Getting Started
 
@@ -13,100 +13,83 @@ O projeto foi desenvolvido utilizando:
   - Sass como pré processador CSS;
   - Redux para tartar dos estados na plicação;
   - React Route para tratar das rotas;
+  - Mocha, Sinon e Chai para testes de unudade;
+  - Instambul para cobertura de testes
   
-### Prerequisitos
+### Requisitos
+É necessário o ```Node``` instalado na máquina, por segurança também instalar o Webpack, apaenasr do mesmo está nas dependências de desenvolvimento
 
+### Instalação 
+#### Certifique-se  de estar na pasta WEBAPP
+
+Instalação das dependências do projeto: 
 ```
-node
-```
-
-
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
+npm install 
 ```
 
-And repeat
-
+Para subir a aplicação localmente:
 ```
-until finished
+npm start
 ```
 
-Depoly 
+Para fazer o build de no ambiente de desenvolvimento.  
+```
+npm build
+```
 
-Para realizar o deploy
+Para fazer o build de produção, sendo gerado o bundle na pasta 'dist', com os arquiovos minificados e otimizados.    
+```
+npm build
+```
+
+## Rodando os Tests
+
+Para dodas os testes basta rodar o comando 
+```
+Give an example
+```
+
+
+### Depoly 
+
+Para realizar o deploy deve-se ter instalado o firebase globalmente
 
 ```
 npm install -g firebase-tools 
 ```
-
-
+O comando de deploi erá criar o bundle de produção com as orimizações d e aruivo necessárias e em seguida mandará o projeto ao servido do firebase
 ```
 npm run deploy  
 ```
 
-Esse comando fará o build de produção com todas as tarefas de minificação e bundle, e em seguida subirá o deloy
 
 
+## Objetivos do teste
 
-End with an example of getting some data out of the system or using it for a little demo
+* [OK] Implementar um Web App que consulte uma API e exiba uma lista de cervejas. 
+* [OK] Na listagem deve ser exibido o nome e tagline. 
+* [OK] Ao selecionar um item na lista, exibir a tela de detalhes, contendo: nome, tagline, descrição e imagem.
 
-## Running the tests
 
-Explain how to run the automated tests for this system
+## Requisitos
 
-### Break down into end to end tests
+* [OK] Utilizar a seguinte API no desafio: https://punkapi.com/documentation/v2;
+Utilizar a lib React;
+* [OK] Criar a aplicação toda em componentes;
+Seguir os padrões e convenções do HTML, CSS e Javascript;
+* [OK] Utilizar o Webpack;
+* [OK] Utilizar npm para gerenciar a aplicação;
+* [OK] Enviar o código para um repositório git público (github, Bitbucket, Gitlab);
 
-Explain what these tests test and why
+## Bônus
 
-```
-Give an example
-```
+* [OK] Implementar Testes Unitários e Funcionais;
+* [OK] Implementar testes com Mocha, Sinon e Chai;
+* [OK] Utilizar uma lib para o uso de rotas (React Routes);
+* [OK] Utilizar uma lib para o gerenciamento de state (Redux);
+* [OK] Utilizar axios para requisições HTTP na API;
+* [OK] Utilizar code coverage (Karma, Istambul, Jasmine);
+* [OK] Utilizar SASS Transpiler pra CSS;
+* [OK] Aplicação rodando em um servidor e o acesso a uma URL;
+* [OK] Implementação de um deploy;
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
