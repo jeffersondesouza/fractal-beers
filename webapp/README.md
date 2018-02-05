@@ -44,9 +44,19 @@ npm build
 
 ## Rodando os Tests
 
-Para dodas os testes basta rodar o comando 
+Para rodar os testes basta dar o comando 
 ```
-Give an example
+npm test
+```
+
+Para rodar os testes em modo de watch, fazendo os mesmo se atualizarem a cada mudança nos arquivos basta dar o comando 
+```
+npm tdd
+```
+
+Para conferir a cobertura de testes basta dar o comando 
+```
+npm coverage
 ```
 
 
