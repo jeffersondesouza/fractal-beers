@@ -4,6 +4,8 @@
 
 Web App para listagem de Cervejas, desenvolvido em React como parte dos testes da Fractal Tecnologia.
 
+OBS: Os textos da aplicação encontran-se em português, mas os códigos/documentação estão em inglês para que determinados design patters sejam mais semânticos 
+
 ## Getting Started
 
 O projeto foi desenvolvido utilizando:
